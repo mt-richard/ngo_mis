@@ -1,0 +1,71 @@
+
+<?php
+        $dsn = 'mysql:host=localhost;port=3306;dbname=NGO_MIS;';
+        $user = 'root';
+        $password = '';
+
+        try {
+            $pdo = new PDO($dsn, $user, $password);
+            echo "Database Connected with mysql";
+        } catch (PDOException $e) {
+            echo 'Connection failed with mysql: ' . $e->getMessage();
+        }
+
+ ?>
+
+<hr>
+
+<?php
+        $dsn = 'pgsql:host=localhost;port=5432;dbname=ngo_mis';
+        $user = 'richard'        $password = 'rich@123';
+        try {
+            $pdo = new PDO($dsn, $user, $password);
+            echo "Database Connected";
+
+	$insert = "INSERT INTO ngo(ngoid,name,physicaladdress,phone,email,url,createdby,updatedby) VALUES (8,'RICH INDUSTRY','KANOMBE','078876564','ric@gmail.com','www.rich.com','Admin','Admin')";
+
+            $pdo ->query($insert);
+            ?>
+            <!-- fetching -->
+            <h2>NGO list</h2>
+            <table border='1' style="border-collapse: collapse;">
+            <tr>
+                <th>ID</th>
+                <th>NAme</th>
+                <th>Address</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>URL</th>
+                <th>CretedBy</th>
+                <th>CreatedAt</th>
+                <th>updatedBy</th>
+                <th>updatedAt</th>
+            </tr>
+            <?
+
+$sql = "SELECT * FROM ngo";
+            foreach($pdo->query($sql) as $row){
+                ?>
+                    <tr>
+                        <td><?php echo $row['ngoid'];  ?></td>
+                        <td><?php echo $row['name'];  ?></td>
+                        <td><?php echo $row['physicaladdress'];  ?></td>
+                        <td><?php echo $row['phone'];  ?></td>
+                        <td><?php echo $row['email'];  ?></td>
+                        <td><?php echo $row['url'];  ?></td>
+                        <td><?php echo $row['cratedby'];  ?></td>
+                        <td><?php echo $row['cratedAt'];  ?></td>
+                        <td><?php echo $row['updatedby'];  ?></td>
+                        <td><?php echo $row['updatedAt'];  ?></td>
+                    </tr>
+                <?php }?>
+</table>
+<?
+
+
+        } catch (PDOException $e) {
+            echo 'Connection failed with postgress: ' . $e->getMessage();
+        }
+ ?>
+
+

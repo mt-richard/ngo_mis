@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+    </script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGO MIS</title>
+</head>
+<body>
+    
+    <div class="p-40 pt-20  w-full bg-gray-300">
+        <div class="w-full max-w-xs ml-[30%]">
+            
+          
+          <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+             <div>
+            <h3 class="p-4 text-gray-700 font-bold text-xl border-b text-center">Login Page</h3>
+            </div>
+           <div class="mb-4 pt-5">
+                <label class="block text-gray-600 text-sm font-bold mb-2" for="username">
+                  Username
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-600 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username">
+              </div>
+              <div class="mb-6">
+                <label class="block text-gray-600 text-sm font-bold mb-2" for="password">
+                  Password
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-600 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************">
+               
+              </div>
+              <div class="items-center justify-between">
+                <button class="bg-blue-500 w-full hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                  Sign In
+                </button>
+                <div class="p-5">
+                  <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#">
+                  Forgot Password?
+                </a>
+                <p class="text-[12px] text-gray-600">If you don't have account, <a class="text-blue-500 font-bold" href="signup.html">SignUp</a></p>
+                </div>
+                
+              </div>
+            </form>
+            <p class="text-center text-gray-500 text-xs">
+              &copy;2023  Corp. All rights reserved.
+            </p>
+          </div>
+    </div>
+
+
+</body>
+</html>
