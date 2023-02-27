@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>NGO MIS | Admin </title>
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+
+</head>
+<body>
+
+    <div class="flex h-[100vh]">
+        <div class="sidebar bg-gray-800 w-[250px]">
+                <h4 class="p-5 font-bold text-center text-gray-200 text-3xl border-b">NGO MIS</h4>
+                
+                <div class="sidebar-nav p-5 pr-0 ">
+                    <ul>
+                        <li class="p-2  cursor-pointer hover:bg-gray-300 hover:text-blue-500 hover:font-normal bg-gray-300 text-blue-500 font-normal  w-full mb-2 rounded-l-xl font-light"><a  style=" text-decoration: none;" class="active" href="index.php" ><span><i style="padding:0 1rem; " class="fas fa-window-restore"></i>Dashboard</span></a></li>
+                        <li class="p-2 text-gray-300 cursor-pointer hover:bg-gray-300 hover:text-blue-500 hover:font-normal w-full mb-2 rounded-l-xl font-light"><a  style=" text-decoration: none;" href="#"><span><i  style="padding:0 1rem; " class="fas fa-archive"></i>Beneficiary</span></a></li>
+                        <li class="p-2 text-gray-300 cursor-pointer hover:bg-gray-300 hover:text-blue-500 hover:font-normal w-full mb-2 rounded-l-xl font-light"><a  style=" text-decoration: none;"  href="#"><span><i  style="padding:0 1rem; " class="fas fa-archive"></i>Donor</span></a></li>
+                        <li class="p-2 text-gray-300 cursor-pointer hover:bg-gray-300 hover:text-blue-500 hover:font-normal w-full mb-2 rounded-l-xl font-light"><a  style=" text-decoration: none;"  href="#"><span><i  style="padding:0 1rem; " class="fas fa-book-reader"></i>Funds</span></a></li>
+                        <li class="p-2 text-gray-300 cursor-pointer hover:bg-gray-300 hover:text-blue-500 hover:font-normal w-full mb-2 rounded-l-xl font-light"><a  style=" text-decoration: none;" href="../"><span><i  style="padding:0 1rem; " class="fas fa-sign-out-alt"></i>Logout</span></a></li>
+                    </ul>
+                </div>
+        </div>
+        <div class="main-content pl-10 pr-10 p-2 w-full bg-gray-300">
+            <div class="flex w-full justify-between border-b border-gray-400">
+                <h4 class=" text-xl text-gra-600 p-2">Dashboard Status of the System </h4>
+               
+                <div class="flex">
+                    <img src="../images/user.png" alt="" class="w-10 h-10 rounded-full">
+                    <h6 class="p-2">Admin</h6>
+                    <!-- <button class="cur
+                     font-bold">V</button> -->
+                </div>
+            </div>
+            <div class="main p-10">
+
+                    <div class="box grid grid-cols-3 gap-10">
+                        <div class="flex hover:border-blue-500 border bg-gray-100 p-5 h-32 rounded">
+                            <img src="../images/user.png" alt="" class="w-20 h-20">
+                            <div class="content p-2">
+                                <h6> NGOs</h6>
+                                <h5 class="text-blue-500"><b>Total : 1</b></h5>
+                            </div>
+                        </div>
+
+                        <div class="flex hover:border-blue-500 border  bg-gray-100 p-5 h-32 rounded">
+                            <img src="../images/user.png" alt="" class="w-20 h-20">
+                            <div class="content p-2">
+                                <h6> Beneficiary</h6>
+                                <h5 class="text-blue-500"><b>Total : 20</b></h5>
+                            </div>
+                        </div>
+
+                        <div class="flex hover:border-blue-500 border bg-gray-100 p-5 h-32 rounded">
+                            <img src="../images/user.png" alt="" class="w-20 h-20">
+                            <div class="content p-2">
+                                <h6> Donor</h6>
+                                <h5 class="text-blue-500"><b>Total : 3</b></h5>
+                            </div>
+                        </div>
+
+                        <div class="flex hover:border-blue-500 border  bg-gray-100 p-5 h-32 rounded">
+                            <img src="../images/user.png" alt="" class="w-20 h-20">
+                            <div class="content p-2">
+                                <h6> Funds</h6>
+                                <h5 class="text-blue-500"><b>Total : $ 600</b></h5>
+                            </div>
+                        </div>
+
+                        <div class="flex hover:border-blue-500 border  bg-gray-100 p-5 h-32 rounded">
+                            <img src="../images/user.png" alt="" class="w-20 h-20">
+                            <div class="content p-2">
+                                <h6> Employees</h6>
+                                <h5 class="text-blue-500"><b>Total : 23</b></h5>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+        </div>
+    
+    </div>
+   
+</body>
+</html>
